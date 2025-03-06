@@ -1,0 +1,14 @@
+# Node modules
+node_modules/
+
+# Expo build artifacts
+.web-build/
+dist/
+build/
+
+# Logs
+*.log
+
+# macOS / Windows 등 OS별 불필요 파일
+.DS_Store
+Thumbs.db
