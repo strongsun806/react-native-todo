@@ -14,17 +14,25 @@
 
 ## 프로젝트 구조
 \`\`\`
-프로젝트 폴더 구조 (지금은 예시입니다)
-myTodoApp
+react-native-todo
+├── src
+│   ├── components
+│   │   └── TodoItem.js
+│   └── screens
+│       └── HomeScreen.js
 ├── App.js
 ├── package.json
-└── ...
+├── babel.config.js
+├── .gitignore
+└── README.md
+
 \`\`\`
 
-## 실행 방법
-1. 이 저장소를 클론 받거나 다운로드
-2. `npm install` 또는 `yarn install`
-3. `npm start` 또는 `yarn start` 후 시뮬레이터 또는 Expo Go 앱에서 실행
+# 실행 방법
+1. 이 저장소를 클론 혹은 다운로드합니다.
+2. 프로젝트 폴더에서 `npm install` 혹은 `yarn install`을 실행합니다.
+3. `npm start` 또는 `yarn start` 후, Expo Go 앱 혹은 시뮬레이터를 통해 앱을 확인할 수 있습니다.
+
 
 ## 스크린샷
 
