@@ -12,7 +12,10 @@ import {
 import TodoItem from '../components/TodoItem';
 
 export default function HomeScreen() {
-  const [todos, setTodos] = useState([]);
+  const [todos, setTodos] = useState([
+    { id: '1', text: 'React Native 프로젝트 세팅하기', completed: true },
+    { id: '2', text: '할 일 목록 추가해보기', completed: false },
+  ]);
   const [inputText, setInputText] = useState('');
 
   const handleAddTodo = () => {
@@ -43,6 +46,10 @@ export default function HomeScreen() {
       behavior={Platform.OS === 'ios' ? 'padding' : undefined}
       style={styles.container}
     >
+      <View style={styles.header}>
+        <Text style={styles.title}>오늘의 할 일 📝</Text>
+      </View>
+
       <View style={styles.inputContainer}>
         <TextInput
           style={styles.input}
@@ -81,6 +88,20 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#f8f9fa',
+    ...(Platform.OS === 'web' && {
+      height: '100%',
+    }),
+  },
+  header: {
+    paddingHorizontal: 20,
+    paddingTop: 24,
+    paddingBottom: 12,
+    backgroundColor: '#fff',
+  },
+  title: {
+    fontSize: 22,
+    fontWeight: 'bold',
+    color: '#1a1a1a',
   },
   inputContainer: {
     flexDirection: 'row',
@@ -91,34 +112,37 @@ const styles = StyleSheet.create({
   },
   input: {
     flex: 1,
-    height: 44,
+    height: 46,
     borderWidth: 1,
-    borderColor: '#ddd',
+    borderColor: '#e2e8f0',
     borderRadius: 8,
-    paddingHorizontal: 12,
-    backgroundColor: '#fafafa',
+    paddingHorizontal: 14,
+    backgroundColor: '#f8fafc',
+    fontSize: 15,
   },
   addButton: {
-    marginLeft: 8,
-    backgroundColor: '#007AFF',
+    marginLeft: 10,
+    backgroundColor: '#2563eb',
     justifyContent: 'center',
     alignItems: 'center',
-    paddingHorizontal: 16,
+    paddingHorizontal: 18,
     borderRadius: 8,
   },
   addButtonText: {
     color: '#fff',
-    fontWeight: 'bold',
+    fontWeight: '600',
+    fontSize: 15,
   },
   listContent: {
     padding: 16,
+    paddingBottom: 40,
   },
   emptyContainer: {
     alignItems: 'center',
     marginTop: 60,
   },
   emptyText: {
-    color: '#999',
-    fontSize: 16,
+    color: '#94a3b8',
+    fontSize: 15,
   },
 });

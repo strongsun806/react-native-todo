@@ -12,3 +12,18 @@ build/
 # macOS / Windows 등 OS별 불필요 파일
 .DS_Store
 Thumbs.db
+
+# Expo temporary files & caches
+.expo/
+web-build/
+dist/
+devices.json
+settings.json
+
+# Dependencies
+node_modules/
+
+# NPM / Yarn locks (선택)
+npm-debug.*
+yarn-debug.*
+yarn-error.*
